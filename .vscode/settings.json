@@ -1,0 +1,15 @@
+{
+  // If not specified, it assumes a null value by default.
+  // "ruby.rubocop.configFilePath": "./.rubocop.yml",
+  // If not specified searches for 'rubocop' executable available on PATH (default and recommended)
+  "ruby.rubocop.executePath": "/Users/mahaveersoni/.rvm/gems/ruby-3.0.5/wrappers/",
+
+  // default true
+  "ruby.rubocop.onSave": true,
+
+
+  "ruby.rubocop.configFilePath": "./.rubocop.yml",
+
+  // use the --server option when running Rubocop - default false
+  "ruby.rubocop.useServer": true,
+}

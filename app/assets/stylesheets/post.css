@@ -1,0 +1,22 @@
+.post-container {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 50%;
+}
+
+.post-title {
+  text-decoration: none;
+  color: black;
+}
+
+.post-body {
+  text-decoration: none;
+  color: black;
+}
+
+.complete-post-container {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+}

@@ -1,0 +1,14 @@
+<div  class='post-container'>
+  <strong><%= post.user.name %></strong>
+  <%= link_to post_path(post.id) do %> 
+    <h1 class='post-title'><%= post.title %></h1>
+  <% end %>
+  <p class='post-body'>
+      <%= show_post_body(post.body) %>
+  </p>
+
+  <% if user_signed_in? && current_user.id == post.user.id %>
+    <%= link_to 'edit', edit_post_path(post.id) %>
+    <%= link_to 'delete', post_path(post.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }  %>
+  <% end %>
+</div>
