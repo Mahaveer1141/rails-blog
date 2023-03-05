@@ -1,0 +1,7 @@
+<div class='comment-container'>
+  <h6 class="commenter"><%= comment.user.name %></h6>
+  <p class="comment-body"><%= comment.body %></p>
+  <% if user_signed_in? && comment.user.id == current_user.id %>
+    <%= link_to 'delete', [comment.post, comment], data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }  %>
+  <% end %>
+</div>

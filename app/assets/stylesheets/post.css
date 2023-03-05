@@ -20,3 +20,15 @@
   margin: 1rem;
   padding: 1rem;
 }
+
+.commenter {
+  margin: 1rem 0 0 0;
+}
+
+.comment-body {
+  margin: 0.2rem 0 0rem 0;
+}
+
+.comment-container {
+  margin-bottom: 1rem;
+}
