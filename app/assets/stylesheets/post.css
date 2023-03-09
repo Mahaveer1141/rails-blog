@@ -32,3 +32,11 @@
 .comment-container {
   margin-bottom: 1rem;
 }
+
+.vote-container {
+  margin-top: 1rem;
+}
+
+.v-button:hover {
+  cursor: pointer;
+}

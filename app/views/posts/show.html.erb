@@ -9,6 +9,13 @@
     <%= link_to 'edit', edit_post_path(@post.id) %>
     <%= link_to 'delete', post_path(@post.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }  %>
   <% end %>
+
+  <div class="vote-container">
+    <%= link_to 'up', post_upvote_path(@post), data: { turbo_method: :post } %>
+    <p><strong>Votes: </strong>4</p>
+    <%= link_to 'down', post_downvote_path(@post), data: { turbo_method: :post } %>
+  </div>
+
   <h3>Comments</h3>
   <%= render 'comments/form' %>
 
