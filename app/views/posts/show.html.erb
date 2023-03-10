@@ -12,7 +12,7 @@
 
   <div class="vote-container">
     <%= link_to 'up', post_upvote_path(@post), data: { turbo_method: :post } %>
-    <p><strong>Votes: </strong>4</p>
+    <p><strong>Votes: </strong><%= @post.votes.sum(:value) %></p>
     <%= link_to 'down', post_downvote_path(@post), data: { turbo_method: :post } %>
   </div>
 
