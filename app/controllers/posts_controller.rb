@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_vote, only: %i[upvote downvote]
   before_action :set_post, only: %i[edit update destroy show]
   before_action :validate_edit_post, only: %i[edit update destroy]
-  before_action :set_post_per_page, :set_post_count, :set_current_page, only: :index
+  before_action :set_page_variables, only: :index
   before_action :validate_page, only: :index
 
   def index
@@ -93,15 +93,9 @@ class PostsController < ApplicationController
     redirect_to post_path(@post.id)
   end
 
-  def set_post_per_page
+  def set_page_variables
     @posts_per_page = 4
-  end
-
-  def set_post_count
     @count = Post.count
-  end
-
-  def set_current_page
     @current_page = if params.key? :page
                       params[:page].to_i
                     else
