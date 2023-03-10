@@ -7,4 +7,9 @@ module PostsHelper
       body
     end
   end
+
+  def next?(count, post_per_page, current_page)
+    total_pages = (count + post_per_page - 1) / post_per_page
+    current_page < total_pages
+  end
 end

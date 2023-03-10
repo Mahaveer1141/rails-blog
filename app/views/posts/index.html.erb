@@ -2,9 +2,18 @@
 
 <h1>Posts</h1>
 
-
 <%= link_to 'new post', new_post_path %>
 
 <% @posts.each do |post| %>
   <%= render 'post', post: post %>
 <% end %>
+
+<div>
+  <% if @current_page != 1 %>
+    <%= link_to "Prev", url_for(controller: "posts", action: "index", page: @current_page - 1) %>
+  <% end %>
+  <span><%= @current_page %></span>
+  <% if next?(@count, @posts_per_page, @current_page) %>
+    <%= link_to "Next", url_for(controller: "posts", action: "index", page: @current_page + 1) %>
+  <% end %>
+</div>
